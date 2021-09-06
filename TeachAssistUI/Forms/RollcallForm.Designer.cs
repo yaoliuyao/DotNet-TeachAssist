@@ -55,43 +55,48 @@ namespace TeachAssistUI
             // 
             this.lbPresents.BackColor = System.Drawing.SystemColors.Info;
             this.lbPresents.FormattingEnabled = true;
-            this.lbPresents.ItemHeight = 18;
-            this.lbPresents.Location = new System.Drawing.Point(3, 3);
+            this.lbPresents.ItemHeight = 24;
+            this.lbPresents.Location = new System.Drawing.Point(4, 4);
+            this.lbPresents.Margin = new System.Windows.Forms.Padding(4);
             this.lbPresents.Name = "lbPresents";
-            this.lbPresents.Size = new System.Drawing.Size(261, 94);
+            this.lbPresents.Size = new System.Drawing.Size(225, 124);
             this.lbPresents.TabIndex = 0;
             this.lbPresents.SelectedIndexChanged += new System.EventHandler(this.lbPresents_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(321, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(286, 118);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 194);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 172);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(558, 101);
+            this.label1.Font = new System.Drawing.Font("宋体", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(506, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 52);
+            this.label1.Size = new System.Drawing.Size(126, 52);
             this.label1.TabIndex = 3;
+            this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(565, 179);
+            this.label2.Location = new System.Drawing.Point(518, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 18);
+            this.label2.Size = new System.Drawing.Size(83, 24);
             this.label2.TabIndex = 4;
+            this.label2.Text = "Birthday";
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(74, 3);
+            this.buttonLoad.Location = new System.Drawing.Point(91, 4);
+            this.buttonLoad.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(88, 31);
+            this.buttonLoad.Size = new System.Drawing.Size(108, 41);
             this.buttonLoad.TabIndex = 5;
             this.buttonLoad.Text = "加载...";
             this.buttonLoad.UseVisualStyleBackColor = true;
@@ -99,9 +104,10 @@ namespace TeachAssistUI
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(3, 3);
+            this.buttonRefresh.Location = new System.Drawing.Point(4, 4);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(65, 31);
+            this.buttonRefresh.Size = new System.Drawing.Size(79, 41);
             this.buttonRefresh.TabIndex = 8;
             this.buttonRefresh.Text = "刷新";
             this.buttonRefresh.UseVisualStyleBackColor = true;
@@ -109,23 +115,26 @@ namespace TeachAssistUI
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Red;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 42);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-551, -220);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(531, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(514, 20);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(321, 308);
+            this.groupBox1.Location = new System.Drawing.Point(286, 313);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(543, 86);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(529, 84);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "未到";
@@ -135,9 +144,10 @@ namespace TeachAssistUI
             this.flowLayoutPanel2.Controls.Add(this.buttonRefresh);
             this.flowLayoutPanel2.Controls.Add(this.buttonLoad);
             this.flowLayoutPanel2.Controls.Add(this.buttonFileinfo);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(15, 16);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(489, 44);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(598, 59);
             this.flowLayoutPanel2.TabIndex = 12;
             // 
             // buttonFileinfo
@@ -145,11 +155,11 @@ namespace TeachAssistUI
             this.buttonFileinfo.AutoSize = true;
             this.buttonFileinfo.FlatAppearance.BorderSize = 0;
             this.buttonFileinfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFileinfo.Location = new System.Drawing.Point(168, 3);
-            this.buttonFileinfo.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.buttonFileinfo.MaximumSize = new System.Drawing.Size(300, 100);
+            this.buttonFileinfo.Location = new System.Drawing.Point(207, 4);
+            this.buttonFileinfo.Margin = new System.Windows.Forms.Padding(4, 4, 18, 4);
+            this.buttonFileinfo.MaximumSize = new System.Drawing.Size(367, 133);
             this.buttonFileinfo.Name = "buttonFileinfo";
-            this.buttonFileinfo.Size = new System.Drawing.Size(81, 31);
+            this.buttonFileinfo.Size = new System.Drawing.Size(121, 45);
             this.buttonFileinfo.TabIndex = 13;
             this.buttonFileinfo.Text = "unknown";
             this.buttonFileinfo.UseVisualStyleBackColor = true;
@@ -157,27 +167,30 @@ namespace TeachAssistUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(423, 589);
+            this.button3.Location = new System.Drawing.Point(442, 603);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 41);
+            this.button3.Size = new System.Drawing.Size(95, 37);
             this.button3.TabIndex = 13;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(602, 589);
+            this.button5.Location = new System.Drawing.Point(578, 603);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 41);
+            this.button5.Size = new System.Drawing.Size(95, 37);
             this.button5.TabIndex = 14;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(756, 589);
+            this.button6.Location = new System.Drawing.Point(713, 603);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 41);
+            this.button6.Size = new System.Drawing.Size(95, 37);
             this.button6.TabIndex = 15;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
@@ -185,9 +198,10 @@ namespace TeachAssistUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(354, 435);
+            this.label3.Location = new System.Drawing.Point(293, 438);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 90);
+            this.label3.Size = new System.Drawing.Size(121, 120);
             this.label3.TabIndex = 16;
             this.label3.Text = "使用说明:\r\n1. Enter\r\n2. Space\r\n3. BackSpace\r\n4. ESC";
             // 
@@ -195,27 +209,28 @@ namespace TeachAssistUI
             // 
             this.lbAbsents.BackColor = System.Drawing.SystemColors.Info;
             this.lbAbsents.FormattingEnabled = true;
-            this.lbAbsents.ItemHeight = 18;
-            this.lbAbsents.Location = new System.Drawing.Point(3, 101);
-            this.lbAbsents.Margin = new System.Windows.Forms.Padding(3, 1, 3, 3);
+            this.lbAbsents.ItemHeight = 24;
+            this.lbAbsents.Location = new System.Drawing.Point(4, 133);
+            this.lbAbsents.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.lbAbsents.Name = "lbAbsents";
-            this.lbAbsents.Size = new System.Drawing.Size(261, 112);
+            this.lbAbsents.Size = new System.Drawing.Size(225, 148);
             this.lbAbsents.TabIndex = 17;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.lbPresents);
             this.flowLayoutPanel3.Controls.Add(this.lbAbsents);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(15, 71);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(19, 83);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(268, 597);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(237, 595);
             this.flowLayoutPanel3.TabIndex = 18;
             // 
             // RollcallForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 666);
+            this.ClientSize = new System.Drawing.Size(932, 682);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button6);
@@ -223,9 +238,10 @@ namespace TeachAssistUI
             this.Controls.Add(this.button3);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RollcallForm";
             this.Text = "RollcallForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

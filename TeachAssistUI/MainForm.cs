@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeachAssistUI.Forms;
 
 namespace TeachAssistUI
 {
@@ -25,7 +26,7 @@ namespace TeachAssistUI
             pic.Dock = DockStyle.Fill;
             pic.Image = TeachAssistUI.Properties.Resources.TiWen;
             pic.SizeMode = PictureBoxSizeMode.Zoom;
-            this.tableLayoutPanel1.Controls.Add(pic, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(pic, 0, 3);
 
             var btn = new Button();
             btn.Text = "上课提问";
@@ -39,7 +40,7 @@ namespace TeachAssistUI
                 this.toolStripStatusLabel2.Text = "[上课提问]";
             };
 
-            this.tableLayoutPanel1.Controls.Add(btn, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(btn, 1, 3);
         }
 
         private void 软件说明ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,6 +76,11 @@ namespace TeachAssistUI
             this.toolStripStatusLabel2.Text = "[模拟考试]";
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddFormToPanel(new StudentManageForm());
+            this.toolStripStatusLabel2.Text = "[学生管理]";
+        }
     }
 }
 

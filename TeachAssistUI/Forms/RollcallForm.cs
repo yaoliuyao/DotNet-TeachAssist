@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using BLL;
 
 namespace TeachAssistUI
 {
@@ -43,7 +44,7 @@ namespace TeachAssistUI
                 .ToList();
             this.lbAbsents.SelectedIndex = -1;
             this.lbAbsents.ForeColor = Color.Gray;
-            this.lbAbsents.ItemHeight = 12;
+            this.lbPresents.ItemHeight = 12;
             this.lbAbsents.Height = this.lbAbsents.PreferredHeight;
         }
 
