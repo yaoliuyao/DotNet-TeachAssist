@@ -12,17 +12,6 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            var dal = new StudentDAL();
-            dal.DeleteStudent("helloksdk22222");
-
-            var students = dal.GetStudents();
-
-      
-
-            foreach (var s in students)
-            {
-                Console.WriteLine(s);
-            }
         }
     }
 }

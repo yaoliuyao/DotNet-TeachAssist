@@ -89,8 +89,8 @@ namespace TeachAssistUI
                     }
                     else
                     {
-                        // 打开 Edge 游览器
-                        Process.Start("start", new[] { "msedge", "http://10.10.11.201" });
+                        // 通过 Edge 浏览器，打开学校的学生管理系统首页
+                        Process.Start("explorer.exe", "http://10.10.11.201/");
                     }
                     return true;
                 case Keys.Space:
