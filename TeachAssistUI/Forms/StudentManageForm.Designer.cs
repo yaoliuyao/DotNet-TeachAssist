@@ -244,6 +244,7 @@ namespace TeachAssistUI.Forms
             // 
             // dvStudents
             // 
+            this.dvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvStudents.Location = new System.Drawing.Point(0, 0);

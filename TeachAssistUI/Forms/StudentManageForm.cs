@@ -16,7 +16,7 @@ namespace TeachAssistUI.Forms
     {
 
         StudentBLL bll = new StudentBLL();
-        BindingSource bs = new BindingSource();
+        List<Student> students;
 
         public StudentManageForm()
         {
@@ -32,9 +32,8 @@ namespace TeachAssistUI.Forms
             this.dvStudents.AllowUserToDeleteRows = false;
             this.dvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
 
-            var students = bll.GetAllStudent();
-            bs.DataSource = students;
-            this.dvStudents.DataSource = bs;
+            students = bll.GetAllStudent();
+            this.dvStudents.DataSource = students;
         }
 
         void InitInputForm()
@@ -114,7 +113,7 @@ namespace TeachAssistUI.Forms
                     MessageBox.Show("更新成功");
                 }
 
-                bs.DataSource = bll.GetAllStudent();
+                this.dvStudents.DataSource = bll.GetAllStudent();
                 InitInputForm();
             }
             catch (Exception ex)
