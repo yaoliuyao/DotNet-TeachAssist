@@ -1,6 +1,10 @@
 ﻿using BLL;
 using DAL;
+using Models;
 using System;
+using System.Data.SqlClient;
+using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TestConsole
 {
@@ -8,10 +12,16 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            var bll = new StudentBLL();
-            foreach(var student in bll.GetAllNormalStudents())
+            var dal = new StudentDAL();
+            dal.DeleteStudent("helloksdk22222");
+
+            var students = dal.GetStudents();
+
+      
+
+            foreach (var s in students)
             {
-                Console.WriteLine(student);
+                Console.WriteLine(s);
             }
         }
     }

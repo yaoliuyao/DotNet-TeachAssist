@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -88,7 +89,8 @@ namespace TeachAssistUI
                     }
                     else
                     {
-                        MessageBox.Show("点名完毕");
+                        // 打开 Edge 游览器
+                        Process.Start("start", new[] { "msedge", "http://10.10.11.201" });
                     }
                     return true;
                 case Keys.Space:

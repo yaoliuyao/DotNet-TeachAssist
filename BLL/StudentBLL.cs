@@ -11,7 +11,7 @@ namespace BLL
         public List<Student> GetAllNormalStudents()
         {
             var dal = new StudentDAL();
-            var students = dal.GetAllStudents().Where(s => s.State == 1);
+            var students = dal.GetStudents().Where(s => s.State == 1);
 
             Console.WriteLine("hhahaha");
 
