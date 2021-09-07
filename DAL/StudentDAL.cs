@@ -67,6 +67,29 @@ namespace DAL
             return students;
         }
 
+        public Student GetStudentById(string id)
+        {
+            using var connection = DbHelper.GetConnection();
+
+            var sql = @"select id, name, homecity, telephone, state from students where id=@id";
+            var command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@id", id);
+
+            using var reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                return new Student()
+                {
+                    Id = reader[0] as string,
+                    Name = reader["name"] as string,
+                    Homecity = reader[2] as string,
+                    Telephone = reader[3] as string,
+                    State = (int)reader[4]
+                };
+            }
+            return null;
+        }
+
         public int AddStudent(Student student)
         {
             return DbHelper.DoExecuteNonQuery(

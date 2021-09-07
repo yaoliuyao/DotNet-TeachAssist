@@ -29,7 +29,6 @@ namespace TeachAssistUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbPresents = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,23 +44,12 @@ namespace TeachAssistUI
             this.label3 = new System.Windows.Forms.Label();
             this.lbAbsents = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbPresents = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbPresents
-            // 
-            this.lbPresents.BackColor = System.Drawing.SystemColors.Info;
-            this.lbPresents.FormattingEnabled = true;
-            this.lbPresents.ItemHeight = 24;
-            this.lbPresents.Location = new System.Drawing.Point(4, 4);
-            this.lbPresents.Margin = new System.Windows.Forms.Padding(4);
-            this.lbPresents.Name = "lbPresents";
-            this.lbPresents.Size = new System.Drawing.Size(225, 124);
-            this.lbPresents.TabIndex = 0;
-            this.lbPresents.SelectedIndexChanged += new System.EventHandler(this.lbPresents_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -210,7 +198,7 @@ namespace TeachAssistUI
             this.lbAbsents.BackColor = System.Drawing.SystemColors.Info;
             this.lbAbsents.FormattingEnabled = true;
             this.lbAbsents.ItemHeight = 24;
-            this.lbAbsents.Location = new System.Drawing.Point(4, 133);
+            this.lbAbsents.Location = new System.Drawing.Point(4, 154);
             this.lbAbsents.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
             this.lbAbsents.Name = "lbAbsents";
             this.lbAbsents.Size = new System.Drawing.Size(225, 148);
@@ -225,6 +213,17 @@ namespace TeachAssistUI
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(237, 595);
             this.flowLayoutPanel3.TabIndex = 18;
+            // 
+            // lbPresents
+            // 
+            this.lbPresents.BackColor = System.Drawing.SystemColors.Info;
+            this.lbPresents.FormattingEnabled = true;
+            this.lbPresents.ItemHeight = 24;
+            this.lbPresents.Location = new System.Drawing.Point(4, 1);
+            this.lbPresents.Margin = new System.Windows.Forms.Padding(4, 1, 4, 4);
+            this.lbPresents.Name = "lbPresents";
+            this.lbPresents.Size = new System.Drawing.Size(225, 148);
+            this.lbPresents.TabIndex = 18;
             // 
             // RollcallForm
             // 
@@ -255,8 +254,6 @@ namespace TeachAssistUI
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lbPresents;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -272,5 +269,6 @@ namespace TeachAssistUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lbAbsents;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.ListBox lbPresents;
     }
 }

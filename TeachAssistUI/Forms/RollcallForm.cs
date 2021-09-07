@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using BLL;
+using Models;
 
 namespace TeachAssistUI
 {
@@ -29,24 +30,22 @@ namespace TeachAssistUI
 
         void InitStudents()
         {
-            var students = GetNamesFromFile(studentListFile);
+            //var students = GetNamesFromFile(studentListFile);
+            var studentBLL = new StudentBLL();
 
             // 列表
-            names = ShufferNames(students);
-            this.lbPresents.DataSource = names;
-            this.lbPresents.SelectedIndex = -1;
-            this.lbPresents.ItemHeight = 12;
-            this.lbPresents.Height = this.lbPresents.PreferredHeight;
+            var bindingSource = new BindingSource();
+            bindingSource.DataSource = studentBLL.GetPresentStudents(); ;
+            this.lbPresents.DataSource = bindingSource;
+            this.lbPresents.DisplayMember = "Name";
+            this.lbPresents.ValueMember = "Id";
+            this.lbPresents.SelectedIndex = 0;
 
-            // 请假的
-            this.lbAbsents.DataSource = students
-                .Where(n => n.StartsWith("--"))
-                .Select(n => n.Substring(2))
-                .ToList();
-            this.lbAbsents.SelectedIndex = -1;
-            this.lbAbsents.ForeColor = Color.Gray;
-            this.lbPresents.ItemHeight = 12;
-            this.lbAbsents.Height = this.lbAbsents.PreferredHeight;
+            var bindingSource2 = new BindingSource();
+            bindingSource2.DataSource = studentBLL.GetAbsentStudents(); ;
+            this.lbAbsents.DataSource = bindingSource2;
+            this.lbAbsents.DisplayMember = "Name";
+
         }
 
         void InitFileShow()
