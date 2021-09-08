@@ -18,7 +18,7 @@ namespace TeachAssistUI
 {
     public partial class RollcallForm : Form
     {
-        List<string> names;
+        List<Student> students;
         string studentListFile = @"e:\aaa.txt";
 
         public RollcallForm()
@@ -32,13 +32,14 @@ namespace TeachAssistUI
         {
             //var students = GetNamesFromFile(studentListFile);
             var studentBLL = new StudentBLL();
+            students = studentBLL.GetPresentStudents();
 
             // 列表
             var bindingSource = new BindingSource();
-            bindingSource.DataSource = studentBLL.GetPresentStudents(); ;
+            bindingSource.DataSource = students;
             this.lbPresents.DataSource = bindingSource;
             this.lbPresents.DisplayMember = "Name";
-            this.lbPresents.ValueMember = "Id";
+            this.lbPresents.ValueMember = "Name";
             this.lbPresents.SelectedIndex = 0;
 
             var bindingSource2 = new BindingSource();
@@ -81,10 +82,10 @@ namespace TeachAssistUI
             switch (keyData)
             {
                 case Keys.Enter:
-                    if (lbPresents.SelectedIndex < names.Count - 1)
+                    if (lbPresents.SelectedIndex < students.Count - 1)
                     {
                         lbPresents.SelectedIndex += 1;
-                        Speak(lbPresents.SelectedItem.ToString());
+                        Speak(lbPresents.SelectedValue.ToString());
                     }
                     else
                     {

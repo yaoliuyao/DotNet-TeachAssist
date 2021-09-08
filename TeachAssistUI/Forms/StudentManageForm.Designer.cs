@@ -245,9 +245,11 @@ namespace TeachAssistUI.Forms
             // dvStudents
             // 
             this.dvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvStudents.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvStudents.Location = new System.Drawing.Point(0, 0);
+            this.dvStudents.MultiSelect = false;
             this.dvStudents.Name = "dvStudents";
             this.dvStudents.RowHeadersWidth = 62;
             this.dvStudents.RowTemplate.Height = 32;

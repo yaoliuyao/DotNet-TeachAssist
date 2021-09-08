@@ -90,18 +90,33 @@ namespace TeachAssistUI.Forms
             {
                 if (btSave.Text == "保存新增")
                 {
-                    bll.SaveAdd(new Student()
+                    var s = new Student()
                     {
                         Id = tbId.Text,
                         Name = tbName.Text,
                         Homecity = tbHc.Text,
                         Telephone = tbTel.Text,
                         State = int.Parse(tbState.Text)
-                    });
+                    };
+                    bll.SaveAdd(s);
                     MessageBox.Show("添加成功");
+
+                    this.dvStudents.DataSource = bll.GetAllStudent();
+                    InitInputForm();
+
+                    for (int i = 0; i < this.dvStudents.Rows.Count; i++)
+                    {
+                        var row = this.dvStudents.Rows[i];
+                        if (row.Cells[0].Value.ToString() == s.Id)
+                        {
+                            this.dvStudents.CurrentCell = this.dvStudents.Rows[i].Cells[0];
+                        }
+                    }
                 }
                 else if (btSave.Text == "保存更新")
                 {
+                    var previousIndex = this.dvStudents.CurrentRow.Index;
+
                     bll.SaveUpdate(new Student()
                     {
                         Id = tbId.Text,
@@ -111,10 +126,14 @@ namespace TeachAssistUI.Forms
                         State = int.Parse(tbState.Text)
                     });
                     MessageBox.Show("更新成功");
+                    
+                    this.dvStudents.DataSource = bll.GetAllStudent();
+                    InitInputForm();
+
+                    this.dvStudents.CurrentCell = this.dvStudents.Rows[previousIndex].Cells[1];
+                    this.dvStudents.Rows[previousIndex].Selected = true;
                 }
 
-                this.dvStudents.DataSource = bll.GetAllStudent();
-                InitInputForm();
             }
             catch (Exception ex)
             {
